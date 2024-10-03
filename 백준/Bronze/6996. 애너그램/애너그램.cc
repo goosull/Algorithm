@@ -1,4 +1,3 @@
-
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -15,12 +14,6 @@ int main() {
     for (int i = 0; i < n; i++) {
         string a, b;
         cin >> a >> b;
-
-        // 문자열의 길이가 다르면 애너그램이 될 수 없음
-        if (a.length() != b.length()) {
-            cout << a << " & " << b << " are NOT anagrams." << endl;
-            continue;
-        }
 
         // 두 문자열을 정렬
         string tempa = a, tempb = b;
