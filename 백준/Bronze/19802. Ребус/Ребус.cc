@@ -8,10 +8,7 @@ int main() {
 
     string s, ans;
 
-    while (1) {
-        cin >> s;
-        if (cin.eof()) break;
-
+    while (cin >> s) {
         int front = 0, end = 0, mid = 0;
 
         for (int i = 0; i < s.length(); i++) {
