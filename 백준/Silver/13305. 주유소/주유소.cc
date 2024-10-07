@@ -18,12 +18,12 @@ int main() {
 
   int current = 0, next = 0;
   long long ans = 0;
-  while (current < n) {
+  while (current < n - 1) {
     next = current + 1;
-    while (next < n && cost[current] <= cost[next]) {
+    while (next < n - 1 && cost[current] <= cost[next]) {
       next++;
     }
-    int distance = 0;
+    long long distance = 0;
     for (int i = current; i < next; i++) {
       distance += road[i];
     }
