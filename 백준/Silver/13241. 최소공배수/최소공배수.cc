@@ -1,13 +1,7 @@
 #include <iostream>
+#include <numeric>
 
 using namespace std;
-
-long long gcd(int a, int b) {
-    if (a == 0) {
-        return b;
-    }
-    return gcd(b % a, a);
-}
 
 int main() {
     std::ios_base::sync_with_stdio(false);
@@ -18,11 +12,5 @@ int main() {
 
     cin >> a >> b;
 
-    long long ans = a * b;
-
-    if (a > b) {
-        cout << ans / gcd(b, a);
-    } else {
-        cout << ans / gcd(a, b);
-    }
+    cout << lcm(a, b);
 }
