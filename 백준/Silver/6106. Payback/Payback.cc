@@ -20,7 +20,6 @@ int main() {
     if (cur < 0) {
       if (pos == -1) pos = i;
     } else if (pos != -1) {
-      // cout << "pos: " << pos << " i: " << i << '\n';
       cnt += 2 * (i - pos);
       pos = -1;
     }
