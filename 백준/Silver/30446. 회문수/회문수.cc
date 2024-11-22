@@ -12,13 +12,10 @@ void dfs(string s, int l, bool odd) {
 
   string palindrome = s + revs;
 
-  try {
-    long long num = stoll(palindrome);
-    if (num > n) return;
-    ans++;
-  } catch (const std::exception& e) {
-    return;
-  }
+  if (palindrome.length() < 1) return;
+  long long num = stoll(palindrome);
+  if (num > n) return;
+  ans++;
 
   for (char c = '0'; c <= '9'; c++) {
     dfs(s + c, l, odd);
